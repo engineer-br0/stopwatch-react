@@ -1,8 +1,10 @@
 .todo{
    display: grid;
+   
 }
 .head{
     justify-self: center;
+    font-size: x-large;
 }
 .items{
     background-color: rgb(158, 211, 249);
