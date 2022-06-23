@@ -5,7 +5,7 @@ function Expenses(props){
         <div className='todo'>
            <div className='head'> To DO List </div>
            <div className='items'>
-                <div className='date'>{props.date.toLocalString()}</div>
+                <div className='date'>{props.date.toDateString()}</div>
                 <div className='des'>  {props.title} </div>
                 <div className='pro'>  {props.pro}</div>
            </div>
