@@ -49,6 +49,7 @@ function Expenses2(){
   return(
     
     <div>
+      <div className='todo'> TO DO LIST</div>
        <Expenses
         title = {arr[0].title} date ={arr[0].date} pro={arr[0].pro}>
         </Expenses>

@@ -3,7 +3,7 @@ import './Expenses.css'
 function Expenses(props){
     return(
         <div className='todo'>
-           <div className='head'> To DO List </div>
+        
            <div className='items'>
                 <div className='date'>{props.date.toDateString()}</div>
                 <div className='des'>  {props.title} </div>
