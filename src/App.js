@@ -24,7 +24,7 @@ function App() {
 
 export default App;
 */
-
+import './App.css'
 import Expenses from './components/Expenses.js'
 
 function Expenses2(){
