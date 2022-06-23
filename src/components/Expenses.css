@@ -7,6 +7,7 @@
     font-size: x-large;
 }
 .items{
+    width: 90%;
     background-color: rgb(158, 211, 249);
     display: flex;
     justify-content:space-between;
