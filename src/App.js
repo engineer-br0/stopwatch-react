@@ -30,7 +30,11 @@ import Expenses from './components/Expenses.js'
 function Expenses2(){
   return(
     <div>
-       <Expenses/>
+       <Expenses
+        title = 'abc'>
+          
+        </Expenses>
+       
       
        </div>
   );
