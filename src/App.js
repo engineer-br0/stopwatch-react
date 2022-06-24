@@ -55,14 +55,17 @@ function Expenses2(){
       
        <Expenses
         title = {arr[0].title} date ={arr[0].date} pro={arr[0].pro}>
+          hiiiiiii
         </Expenses>
 
         <Expenses
         title = {arr[1].title} date ={arr[1].date} pro={arr[1].pro}>
+          hello
         </Expenses>
 
         <Expenses
         title = {arr[2].title} date ={arr[2].date} pro={arr[2].pro}>
+          love u all
         </Expenses>
 
        </div>

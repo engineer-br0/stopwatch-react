@@ -4,6 +4,7 @@ function Expenses(props){
     return(
         <div className='todo'>
            <div>Expenses</div>
+           {props.children}
            <div className='items'>
                 <div className='date'>{props.date.toDateString()}</div>
                 <ExpensesTitle title={props.title} />
