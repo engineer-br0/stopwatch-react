@@ -26,8 +26,8 @@ import Expenses2 from './App.js'
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   
-    <div>
-      
+    <div className="ind">
+     <div>index.js</div> 
     <Expenses2></Expenses2>
     </div>
 );
