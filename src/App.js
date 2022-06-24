@@ -48,9 +48,9 @@ function Expenses2(){
   ];
   return(
     
-    <div>
+    <div className='app'>
       <div>App.js</div>
-      
+
       <div className='todo'> TO DO LIST</div>
       
        <Expenses
