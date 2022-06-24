@@ -1,9 +1,11 @@
 import './Expenses.css'
 import ExpensesTitle from './ExpensesTitle'
 function Expenses(props){
+     let classes = "todo" + props.className;
     return(
-        <div className='todo'>
-           <div>Expenses</div>
+         
+        <div className={classes}>
+           <div>Expenses </div>
            {props.children}
            <div className='items'>
                 <div className='date'>{props.date.toDateString()}</div>
