@@ -26,6 +26,7 @@ export default App;
 */
 import './App.css'
 import Expenses from './components/Expenses.js'
+import ExpenseForm from './components/ExpenseForm';
 
 function Expenses2(){
   let arr = [
@@ -46,8 +47,11 @@ function Expenses2(){
     }
     
   ];
+  
+  function receivingfunc(obj){
+      console.log(obj);
+  }
   return(
-    
     <div className='app'>
       <div>App.js</div>
 
@@ -62,12 +66,10 @@ function Expenses2(){
         title = {arr[1].title} date ={arr[1].date} pro={arr[1].pro}>
           hello
         </Expenses>
-
-        <Expenses
-        title = {arr[2].title} date ={arr[2].date} pro={arr[2].pro}>
-          love u all
-        </Expenses>
-
+        
+        <div>
+        <ExpenseForm appfunc = {receivingfunc}/>
+        </div>
        </div>
   );
 }
