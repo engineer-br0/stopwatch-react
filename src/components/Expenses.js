@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import './Expenses.css'
-import ExpensesTitle from './ExpensesTitle'
 function Expenses(props){
     
     let [title, settitle] = useState(props.title);
@@ -10,7 +9,7 @@ function Expenses(props){
     }
     var [newTitle, setNew] = useState("");
     function changeFunc(event){
-          setNew(event.target.value);
+          console.log("1");
     }
 
      let classes = "todo" + props.className;
@@ -23,7 +22,7 @@ function Expenses(props){
            {props.children}
            <div className='items'>
                 <div className='date'>{props.date.toDateString()}</div>
-                <ExpensesTitle title={title} />
+               <div className='title'> {title} </div>
                 <div className='pro'>  {props.pro}</div>
            </div>
            <input type="text" placeholder='enter title..' value={newTitle} onChange={changeFunc}></input>
