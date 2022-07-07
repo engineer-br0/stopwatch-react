@@ -25,51 +25,83 @@ function App() {
 export default App;
 */
 import './App.css'
-import Expenses from './components/Expenses.js'
-import ExpenseForm from './components/ExpenseForm';
+//import Expenses from './components/Expenses.js'
+//import ExpenseForm from './components/ExpenseForm';
+
+
 
 function Expenses2(){
-  let arr = [
-    {
-      date : new Date(2022, 6, 23),
-      title : "learning react",
-      pro : "project1"
-    },
-    {
-      date : new Date(2022, 6, 25),
-      title : "using react",
-      pro : "project2"
-    },
-    {
-      date : new Date(2022, 6, 27),
-      title : "expert in react",
-      pro : "project3"
-    }
-    
-  ];
+ 
   
-  function receivingfunc(obj){
-      console.log(obj);
-  }
+  
+  var temp = 0;
+    var tens = 0;
+    var s=0;
+    var ss=0;
+    var stop = document.getElementById("stop");
+    var start = document.getElementById("start");
+    var reset = document.getElementById("reset");
+    var sec = document.getElementById("sec");
+    var ms = document.getElementById("ms");
+    var st;
+    start.addEventListener("click", function(){
+       if(start.onclick==true) return;
+       st = setInterval(function(){
+          temp++;
+          
+          if(temp>9){
+            tens++;
+            temp=0;
+            if(tens>9 ){
+              s++;
+              tens=0;
+              temp=0;
+              
+          }
+          }
+          sec.innerHTML= ss + "" + s;
+          ms.innerHTML = tens  + "" + temp;
+          start.disabled=true;
+       } , 10); 
+       
+    });
+    
+    stop.addEventListener("click", function(){
+       clearInterval(st);
+       start.disabled=false;
+    });
+   
+    reset.addEventListener("click", function(){
+       clearInterval(st);
+       tens=0;
+              temp=0;
+              s=0;
+              ss=0;
+       sec.innerHTML= "00";
+          ms.innerHTML = "00";
+          start.disabled=false;
+    });
+  
   return(
+    
     <div className='app'>
-      <div>App.js</div>
 
-      <div className='todo'> TO DO LIST</div>
-      
-       <Expenses
-        title = {arr[0].title} date ={arr[0].date} pro={arr[0].pro}>
-          hiiiiiii
-        </Expenses>
+   <h1> STOPWATCH </h1>
+   <div id="items">
+   <div id="num">
+   <span id="sec"> 00</span>
+   <span>:</span>
+   <span id="ms">00</span>
+   </div>
+<div id="button">
+   <input type="button" value="Start" id="start" class="bt"/>
+   <input type="button" value="Stop" id="stop" class="bt"/>
+   <input type="button" value="Reset" id="reset" class="bt"/>
+</div>
+</div>
+<div id="footer"> @immridulsharma</div>
 
-        <Expenses
-        title = {arr[1].title} date ={arr[1].date} pro={arr[1].pro}>
-          hello
-        </Expenses>
-        
-        <div>
-        <ExpenseForm appfunc = {receivingfunc}/>
-        </div>
+
        </div>
   );
 }

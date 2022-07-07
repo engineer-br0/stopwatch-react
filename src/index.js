@@ -28,7 +28,7 @@ root.render(
   
     <div className="ind">
      <div>index.js</div> 
-    <Expenses2></Expenses2>
+    <Expenses2>abc</Expenses2>
     </div>
 );
 
