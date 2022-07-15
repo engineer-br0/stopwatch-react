@@ -1,34 +1,15 @@
-import { useState } from 'react';
-import './Expenses.css'
+import ExpenseItem from "./ExpenseItem";
 function Expenses(props){
-    
-    let [title, settitle] = useState(props.title);
-  
-    var func = () => {
-        settitle(newTitle);
-    }
-    var [newTitle, setNew] = useState("");
-    function changeFunc(event){
-          console.log("1");
-    }
-
-     let classes = "todo" + props.className;
-     
-     
-    return(
-         
-        <div className={classes}>
-           <div>Expenses </div>
-           {props.children}
-           <div className='items'>
-                <div className='date'>{props.date.toDateString()}</div>
-               <div className='title'> {title} </div>
-                <div className='pro'>  {props.pro}</div>
-           </div>
-           <input type="text" placeholder='enter title..' value={newTitle} onChange={changeFunc}></input>
-           <button onClick={func} >button</button>
-        </div>
+    return (
+        <div>
+      <ExpenseItem date ={props.arr[3].date} title ={props.arr[3].title} price={props.arr[3].price}></ExpenseItem>
+      <ExpenseItem date ={props.arr[1].date} title ={props.arr[1].title} price={props.arr[1].price}></ExpenseItem>
+      <ExpenseItem date ={props.arr[2].date} title ={props.arr[2].title} price={props.arr[2].price}></ExpenseItem>
+      <ExpenseItem date ={props.arr[4].date} title ={props.arr[3].title} price={props.arr[4].price}></ExpenseItem>
+      <ExpenseItem date ={props.arr[5].date} title ={props.arr[5].title} price={props.arr[5].price}></ExpenseItem>
+      <ExpenseItem date ={props.arr[0].date} title ={props.arr[0].title} price={props.arr[0].price}></ExpenseItem>
+      </div>
     );
 }
 
-//export default Expenses;
+export default Expenses;

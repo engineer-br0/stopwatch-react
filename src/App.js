@@ -1,3 +1,51 @@
+import "./App.css"
+import Expenses from "./components/Expenses"
+
+function App(){
+  var arr = [
+    {
+       date : new Date(2022, 7, 13),
+       title : " Car Insurance ",
+       price : 200
+    },
+    {
+      date : new Date(2022, 7, 14),
+       title : " DBMS Practical",
+       price : 500
+    },
+    {
+      date : new Date(2022, 7, 16),
+       title : " Semester Back",
+       price : 1100
+    },
+    {
+      date : new Date(2022, 7, 15),
+       title : " Uncle ji ka kiraya",
+       price : 4000
+    },
+    {
+      date : new Date(2022, 7, 15),
+       title : " Electricity Bill",
+       price : 500
+    },
+    {
+      date : new Date(2022, 7, 15),
+       title : " Food",
+       price : 1000
+    }
+  ];
+  
+    return(
+      <div>
+        <h1 className="ex">Expense Tracker</h1>
+        <Expenses arr ={arr}/>
+      </div>
+    )
+}
+
+export default App;
+
+
 /*import logo from './logo.svg';
 import './App.css';
 
@@ -24,39 +72,3 @@ function App() {
 
 export default App;
 */
-import './App.css'
-//import Expenses from './components/Expenses.js'
-//import ExpenseForm from './components/ExpenseForm';
-
-
-
-function Expenses2(){
- 
-  
-
-  
-  return(
-    
-    <div className='app'>
-
-   <h1> STOPWATCH </h1>
-   <div id="items">
-   <div id="num">
-   <span id="sec"> 00</span>
-   <span>:</span>
-   <span id="ms">00</span>
-   </div>
-<div id="button">
-   <input type="button" value="Start" id="start" class="bt"/>
-   <input type="button" value="Stop" id="stop" class="bt"/>
-   <input type="button" value="Reset" id="reset" class="bt"/>
-</div>
-</div>
-<div id="footer"> @immridulsharma</div>
-
-
-       </div>
-  );
-}
-
-export default Expenses2;

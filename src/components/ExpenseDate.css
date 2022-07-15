@@ -1,0 +1,23 @@
+.date{
+    color: white;
+    border: 1px solid white;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 10px;
+    background-color: rgb(46, 45, 45);
+    
+}
+
+.day{
+    text-align: center;
+    font-size: xx-large;
+
+}
+
+.yr{
+    text-align: center;
+}
+
+.month{
+    text-align: center;
+}
